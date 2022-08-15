@@ -32,11 +32,11 @@ from all decoder blocks and use them as the input to the final layer. Therefore,
 In this architecture, backbone resnet50 is used for extracting feature maps from different convolution layers.Feature maps after each convolution layer are fed into RFB(receptive field block) .RFB block is designed with 4 branches,using diliate convolution layers with different rate.With this design,this module not only capture global contextual information of tissues in the picture, but it also reduces the computation costs.The output map of RFB module is fed into RA(reverse attention) module to capture contextual informations and use them as a guild to combine with feature map of each layer to have both spatial informations and contextual ones.   
 
 # Training pranet
-optimizer :Adam    
-min_lr=1e-07   
-max_lr=1e-04
-epoch :168 epochs
-CosineAnnealingLR  
+optimizer :Adam       
+min_lr=1e-07      
+max_lr=1e-04   
+epoch :168 epochs   
+CosineAnnealingLR      
 Result: https://www.kaggle.com/code/bhuynguyn/training-pranet/notebook      
 
 
